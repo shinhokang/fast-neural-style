@@ -1,6 +1,6 @@
 #!/bin/bash
-# declare an array called array and define 3 vales
-training_folder="08_52_18_01_2017"
+training_folder="task2"
+declare -a arr=( "mosaic" "the_scream" )
 style_array=("Femme_nue_assise" "composition-vii" "august_macke_kinder_im_garten")
 
 for stylename in "${style_array[@]}"

@@ -4,3 +4,4 @@ data
 .ipynb_checkpoints
 *.DS_Store
 *.t7
+*.h5

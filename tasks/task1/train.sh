@@ -1,29 +1,24 @@
 #!/bin/bash
-# declare an array called array and define 3 vales
-style_array=("candy")
-#"la_muse")
-# "candy" "starry_night" "feathers")
-#export CUDA_VISIBLE_DEVICES=0
-for stylename in "${style_array[@]}"
+declare -a arr=( "mosaic" "the_scream" )
+
+for style in "${arr[@]}"
 do
-	echo "Start with style:" $stylename
-	echo "--"
+        echo ""
+        echo "Style training: $style"
 	th train.lua \
 		-h5_file tasks/mscoco.h5 \
-		-style_image images/styles/$stylename.jpg \
+		-style_image images/styles/$style.jpg \
 		-content_weights 1.0 \
 		-style_weights 5.0 \
-		-gpu 2
-
-
-		#-style_image_size 384 \
-		#-content_weights 1.0 \
-		#-style_weights 5.0 \
-		#-checkpoint_name tasks/task1/checkpoints/$stylename \
-		#-gpu 2 \
-		#-use_cudnn 1 \
-		#-checkpoint_every 500 \
-		#-num_iterations 1000 \
+		-gpu 0 \
+		-style_image_size 384 \
+		-checkpoint_name "tasks/task1/models/$style" \
+		-use_cudnn 1 \
+		-arch c9s1-32,d64,d128,R128,R128,R128,R128,R128,u64,u32,c9s1-3 \
+		-use_instance_norm 0 \
+		#-batch_size 4 \
+		#-num_iterations 2 \
+		#-checkpoint_every 1 \
 
 done
 
