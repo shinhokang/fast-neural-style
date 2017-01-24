@@ -1,2 +1,0 @@
-Task 2: train model swith Femme nue, Composition VII and own choise. 
-The models trained with instance normlaization. The outputs are needed for task 3 too.

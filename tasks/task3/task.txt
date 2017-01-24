@@ -1,2 +1,0 @@
-Task3: run training with batch normailization
- instance normailzation was done in Task 2
