@@ -22,7 +22,7 @@ do
 		-use_cudnn 1 \
 		-arch c9s1-32,d64,d128,R128,R128,R128,R128,R128,u64,u32,c9s1-3 \
 		-use_instance_norm 0 \
-		> tasks/task1/$style.log &
+		> tasks/task1/$style.log
 		#-batch_size 4 \
 		#-num_iterations 2 \
 		#-checkpoint_every 1 \
