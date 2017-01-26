@@ -20,7 +20,7 @@ do
 		-checkpoint_name "tasks/task3/models/$style" \
 		-use_cudnn 1 \
 		-use_instance_norm 1 \
-		> tasks/task3/$style.log &
+		> tasks/task3/$style.log 
 		#-arch c9s1-32,d64,d128,R128,R128,R128,R128,R128,u64,u32,c9s1-3 \
 		#-batch_size 4 \
 		#-num_iterations 2 \

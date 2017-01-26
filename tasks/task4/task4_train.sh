@@ -24,5 +24,5 @@ do
 			-checkpoint_name tasks/task4/models/${style}_${content_weight}_${style_weight} \
 			-use_cudnn 1 \
 			-use_instance_norm 1 \
-			> tasks/task4/${style}_${content_weight}_${style_weight}.log &
+			> tasks/task4/${style}_${content_weight}_${style_weight}.log 
 done
