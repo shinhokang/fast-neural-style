@@ -2,7 +2,7 @@
 
 #Task 4 train models of starry_night style
 # a. Train a model using only the style loss
-# b. Train models with di↵erent weightings of the content and style losses
+# b. Train models with different weights of the content and style losses
 declare style="starry_night"
 declare -a arr_content_weight=("0.0" "3.0" "6.0")
 declare -a arr_style_weight=("1.0" "3.0" "6.0" "7.0")
