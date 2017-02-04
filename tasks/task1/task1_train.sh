@@ -17,13 +17,12 @@ do
 		-style_weights 5.0 \
 		-gpu 2 \
 		-style_image_size 384 \
-		-checkpoint_name "tasks/task1/models/$style" \
+		-checkpoint_name "tasks/task1/models/${style}" \
 		-use_cudnn 1 \
-		-arch c9s1-32,d64,d128,R128,R128,R128,R128,R128,u64,u32,c9s1-3 \
-		-use_instance_norm 0 \
+		-use_instance_norm 1 \
+		-checkpoint_every 100 \
 		> tasks/task1/$style.log
 		#-batch_size 4 \
 		#-num_iterations 2 \
-		#-checkpoint_every 1 \
 
 done
