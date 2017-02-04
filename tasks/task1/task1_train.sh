@@ -21,7 +21,7 @@ do
 		-use_cudnn 1 \
 		-use_instance_norm 1 \
 		-checkpoint_every 100 \
-		> tasks/task1/$style.log
+		> tasks/task1/${style}_instance_norm.log
 		#-batch_size 4 \
 		#-num_iterations 2 \
 
