@@ -1,15 +1,17 @@
-declare -a arr=( "la_muse" "starry_night" "composition-vii-1913" "femme_nue_assise" "udnie" )
 
-for style in "${arr[@]}"
+declare -a style_arr=("la_muse" "starry_night")
+declare -a image_arr=("peak_obama_from_wash-mon" "peak-trump-from-wash-mon" "Pulp-Fiction-005" "Pulp-Fiction-467" "The-Grand-Budapest-Hotel-058")
+
+for style in "${style_arr[@]}"
 do
-	echo ""
-	echo "Style training: $style"  
-  /usr/bin/time -v th fast_neural_style.lua \
-    -model tasks/models_1and2/ .t7 \
-    -input_image images/content/chicago.jpg \
-    -output_image training/12_09_11_01_2017/testout.png \
-    -gpu 1 \
-    -cudnn_benchmark 1 \
-    -timing 1 \
-
+  for image in "${image_arr[@]}"
+  do
+    /usr/bin/time -v th fast_neural_style.lua \
+        -model tasks/task1/$style.t7 \
+        -input_image images/content/$image.jpg \
+        -output_image training/${style}_${image}.png \
+        -gpu 2 \
+        -cudnn_benchmark 1 \
+        -timing 1 \
+  done
 done
