@@ -10,9 +10,9 @@ do
     /usr/bin/time -v th fast_neural_style.lua \
         -model tasks/task1/$style.t7 \
         -input_image images/content/$image.jpg \
-        -output_image training/${style}_${image}.png \
+        -output_image tasks/task1/output/${style}_${image}.png \
         -gpu 2 \
         -cudnn_benchmark 1 \
-        -timing 1 \
+        -timing 1
   done
 done
