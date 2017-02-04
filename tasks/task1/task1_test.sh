@@ -8,7 +8,7 @@ do
   for image in "${image_arr[@]}"
   do
     /usr/bin/time -v th fast_neural_style.lua \
-        -model tasks/task1/$style.t7 \
+        -model tasks/task1/models/$style.t7 \
         -input_image images/content/$image.jpg \
         -output_image tasks/task1/output/${style}_${image}.png \
         -gpu 2 \
