@@ -1,3 +1,4 @@
+#!/bin/bash
 
 declare -a style_arr=("la_muse" "starry_night")
 declare -a image_arr=("peak_obama_from_wash-mon" "peak-trump-from-wash-mon" "Pulp-Fiction-005" "Pulp-Fiction-467" "The-Grand-Budapest-Hotel-058")
