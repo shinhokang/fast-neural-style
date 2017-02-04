@@ -11,7 +11,7 @@ do
         -model tasks/task1/models/$style.t7 \
         -input_image images/content/$image.jpg \
         -output_image tasks/task1/output/${style}_${image}.png \
-        -gpu 2 \
+        -gpu 3 \
         -cudnn_benchmark 1 \
         -timing 1
   done
