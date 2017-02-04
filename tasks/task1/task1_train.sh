@@ -24,5 +24,18 @@ do
 		> tasks/task1/${style}_instance_norm.log
 		#-batch_size 4 \
 		#-num_iterations 2 \
-
 done
+
+declare -a style_arr=("la_muse" "starry_night")
+
+for style in "${style_arr[@]}"
+do
+  /usr/bin/time -v th fast_neural_style.lua \
+      -model tasks/task1/models/$style.t7 \
+      -input_dir images/content/ \
+      -output_dir tasks/task1/output/${style}/ \
+      -gpu 2 \
+      -cudnn_benchmark 1 \
+      -timing 1
+done
+
