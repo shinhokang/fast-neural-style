@@ -5,3 +5,5 @@ data
 *.DS_Store
 *.t7
 *.h5
+.idea/
+*.zip
